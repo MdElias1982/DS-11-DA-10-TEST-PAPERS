@@ -1,0 +1,60 @@
+def pos(n):
+    """
+    Prints numbers from n-1 down to 0 for positive n.
+    """
+    if n == 0:
+        print("already Zero")
+    else:
+        # For positive n, print from n-1 down to 0
+        for i in range(n - 1, -1, -1):
+            print(i, end=" ")
+        print() # Newline after printing the sequence
+
+def neg(n):
+    """
+    Prints numbers from n up to 0 for negative n.
+    """
+    if n == 0:
+        print("already Zero")
+    else:
+        # For negative n, print from n up to 0
+        for i in range(n, 1): # range(start, stop) - stop is exclusive, so it goes up to 0
+            print(i, end=" ")
+        print(0, end=" ") # Explicitly print 0 as range(n,1) will not include it for negative n
+        print() # Newline after printing the sequence
+
+def solve():
+    # This function would typically be where you call pos or neg based on the input n.
+    # Since the problem asks to complete pos() and neg() and doesn't specify how the input
+    # 'n' is handled by a main function, I'll provide a simple demonstration.
+
+print("Example 1:")
+    n_example1 = 0
+    if n_example1 == 0:
+        pos(n_example1) # Or neg(n_example1), as both handle 0 similarly
+    elif n_example1 > 0:
+        pos(n_example1)
+    else:
+        neg(n_example1)
+
+    print("\nExample 2:")
+    n_example2 = 4
+    if n_example2 == 0:
+        pos(n_example2)
+    elif n_example2 > 0:
+        pos(n_example2)
+    else:
+        neg(n_example2)
+
+    print("\nExample 3:")
+    n_example3 = -3
+    if n_example3 == 0:
+        pos(n_example3)
+    elif n_example3 > 0:
+        pos(n_example3)
+    else:
+        neg(n_example3)
+
+# Call the solve function to demonstrate
+if _name_ == "_main_":
+    solve()
